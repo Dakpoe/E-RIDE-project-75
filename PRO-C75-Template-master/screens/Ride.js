@@ -29,10 +29,9 @@ export default class RideScreen extends Component {
       scanned: false,
       bikeType: "",
       userName: "",
-      //email: firebase.auth()
-      //email: firebase.auth().email
-      //email: firebase.auth().currentUser.email
-      //email: firebase.auth().currentUser
+   
+      email: firebase.auth().currentUser.email
+    
     };
   }
 
@@ -91,11 +90,11 @@ export default class RideScreen extends Component {
           bikeAssigned: true
         });
 
-        // For Android users only
-        // ToastAndroid.show(
-        //   "You have rented the bike for next 1 hour. Enjoy your ride!!!",
-        //   ToastAndroid.SHORT
-        // );
+       
+         ToastAndroid.show(
+          "You have rented the bike for next 1 hour. Enjoy your ride!!!",
+          ToastAndroid.SHORT
+      );
       }
     } else {
       var isEligible = await this.checkUserEligibilityForEndRide(
@@ -112,11 +111,11 @@ export default class RideScreen extends Component {
           bikeAssigned: false
         });
 
-        // For Android users only
-        // ToastAndroid.show(
-        //   "We hope you enjoyed your ride",
-        //   ToastAndroid.SHORT
-        // );
+        
+        ToastAndroid.show(
+           "We hope you enjoyed your ride",
+          ToastAndroid.SHORT
+         );
       }
     }
   };
