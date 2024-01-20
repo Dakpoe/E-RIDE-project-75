@@ -1,16 +1,16 @@
 import firebase from "firebase";
 require("@firebase/firestore");
 
-var firebaseConfig = {
-  apiKey: "AIzaSyCZrG0BF6LrnRpWZjsPQxNGyMCLByo8HrM",
-  authDomain: "e-ride-549e4.firebaseapp.com",
-  projectId: "e-ride-549e4",
-  storageBucket: "e-ride-549e4.appspot.com",
-  messagingSenderId: "588298110700",
-  appId: "1:588298110700:web:34e3df331c6b1fc95047c9",
-  measurementId: "G-G3K7BWL5LH"
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAAIHqhQMCHLAReMMhKh3hWhBMmGKV7F3o",
+  authDomain: "bike-online-website-app.firebaseapp.com",
+  projectId: "bike-online-website-app",
+  storageBucket: "bike-online-website-app.appspot.com",
+  messagingSenderId: "568420241873",
+  appId: "1:568420241873:web:b800869d1551bb930210f0",
+  measurementId: "G-23KZH6SY6B"
 };
-
 firebase.initializeApp(firebaseConfig);
 
 export default firebase.firestore();
